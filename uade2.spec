@@ -1,12 +1,12 @@
 Summary:	Replayer for old amiga music file formats
 Summary(pl):	Odtwarzacz starych amigowych plików muzycznych
 Name:		uade2
-Version:	2.00
+Version:	2.02
 Release:	1
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://zakalwe.virtuaalipalvelin.net/uade/uade2/uade-%{version}.tar.bz2
-# Source0-md5:	fd669f8c7959e98e70af4f015e2ee5c6
+# Source0-md5:	b7d540dbdebd58bc2bbf3a38d28cfd10
 URL:		http://zakalwe.virtuaalipalvelin.net/uade/
 BuildRequires:	gtk+-devel
 BuildRequires:	libao-devel
