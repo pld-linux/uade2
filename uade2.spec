@@ -1,16 +1,17 @@
 Summary:	Replayer for old amiga music file formats
 Summary(pl.UTF-8):	Odtwarzacz starych amigowych plików muzycznych
 Name:		uade2
-Version:	2.07
+Version:	2.12
 Release:	1
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://zakalwe.virtuaalipalvelin.net/uade/uade2/uade-%{version}.tar.bz2
-# Source0-md5:	2dd16715a6a2e15f5f1dc6ba2d2bc078
+# Source0-md5:	72342daf52b43ac0c51086cdc088f25c
 URL:		http://zakalwe.virtuaalipalvelin.net/uade/
 BuildRequires:	gtk+-devel
 BuildRequires:	libao-devel
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.125
 BuildRequires:	xmms-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -82,11 +83,15 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING ChangeLog
 %doc doc/{BUGS,PLANS,UAE-*,audio_emulation.txt}
+%attr(755,root,root) %{_bindir}/mod2ogg2.sh
 %attr(755,root,root) %{_bindir}/uade123
+%attr(755,root,root) %{_bindir}/uadefs
+%attr(755,root,root) %{_bindir}/uadexmmsadd
 %dir %{_libdir}/uade2
 %attr(755,root,root) %{_libdir}/uade2/uadecore
 %{_datadir}/uade2
 %{_mandir}/man1/*
+%{_pkgconfigdir}/uade.pc
 
 %files examples
 %defattr(644,root,root,755)
